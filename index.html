@@ -1,149 +1,29 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="theme-color" content="#123b35">
-  <meta name="description" content="Relax Vibe — professional massage and wellness service enquiries in Ranchi and Jamshedpur.">
-  <title>Relax Vibe | Body Massage & Wellness</title>
-  <style>
-    :root{--green:#123b35;--green2:#1d5b50;--gold:#d8b77a;--cream:#f7f4ed;--ink:#20312d;--muted:#66736e;--white:#fff}
-    *{box-sizing:border-box} html{scroll-behavior:smooth}
-    body{margin:0;font-family:Arial,Helvetica,sans-serif;background:var(--cream);color:var(--ink);line-height:1.6}
-    a{color:inherit;text-decoration:none}.wrap{width:min(1120px,92%);margin:auto}
-    header{background:var(--green);color:white;position:sticky;top:0;z-index:10}
-    .nav{height:72px;display:flex;align-items:center;justify-content:space-between;gap:20px}
-    .brand{font-size:1.35rem;font-weight:800;letter-spacing:.4px}.brand span{color:var(--gold)}
-    nav{display:flex;gap:22px;font-size:.94rem}nav a:hover{color:var(--gold)}
-    .hero{background:linear-gradient(110deg,rgba(9,35,31,.94),rgba(18,59,53,.76)),url('https://images.unsplash.com/photo-1540555700478-4be289fbecef?auto=format&fit=crop&w=1800&q=85') center/cover;color:white;padding:100px 0 105px}
-    .eyebrow{color:var(--gold);font-weight:700;letter-spacing:2px;text-transform:uppercase;font-size:.78rem}
-    h1{font-size:clamp(2.3rem,6vw,4.6rem);line-height:1.08;max-width:760px;margin:15px 0}
-    .hero p{max-width:620px;color:#e5eeeb;font-size:1.08rem}
-    .btn{display:inline-block;background:var(--gold);color:#1b302b;padding:13px 21px;border-radius:6px;font-weight:700;border:0;cursor:pointer;margin-top:14px}
-    .btn:hover{filter:brightness(.95)}.btn.secondary{background:transparent;border:1px solid #d8e3df;color:white;margin-left:8px}
-    section{padding:70px 0}.section-head{text-align:center;max-width:700px;margin:0 auto 34px}
-    h2{font-size:clamp(1.8rem,4vw,2.6rem);margin:0 0 10px;color:var(--green)}
-    .section-head p,.muted{color:var(--muted)}
-    .grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
-    .card{background:white;border-radius:12px;padding:25px;box-shadow:0 8px 26px rgba(22,49,42,.06)}
-    .card .symbol{font-size:1.8rem}.card h3{color:var(--green);margin:12px 0 6px}
-    .note{background:#e9eee8;border-left:4px solid var(--gold);padding:15px 18px;border-radius:5px;color:#43534d}
-    .locations{background:#e9eee8}.location-card{background:white;padding:25px;border-radius:12px}
-    .booking{background:var(--green);color:white}.booking h2{color:white}.booking .section-head p{color:#d5e2dd}
-    form{background:white;color:var(--ink);padding:26px;border-radius:12px;max-width:720px;margin:auto}
-    .fields{display:grid;grid-template-columns:1fr 1fr;gap:15px}
-    label{display:block;font-weight:700;font-size:.9rem;margin:0 0 6px}
-    input,select,textarea{width:100%;padding:12px;border:1px solid #d4ddd8;border-radius:6px;font:inherit;background:#fff}
-    textarea{min-height:100px;resize:vertical}.full{grid-column:1/-1}
-    .small{font-size:.82rem;color:var(--muted);margin-top:12px}
-    footer{background:#0b2b26;color:#dbe6e1;padding:30px 0;text-align:center}
-    footer small{color:#b9cbc3}
-    @media(max-width:760px){nav{gap:12px;font-size:.82rem}.nav{height:auto;min-height:68px;flex-wrap:wrap;padding:12px 0}.grid{grid-template-columns:1fr}.hero{padding:75px 0}.fields{grid-template-columns:1fr}.full{grid-column:auto}.btn.secondary{margin-left:0}}
-  </style>
-</head>
-<body>
-<header>
-  <div class="wrap nav">
-    <a class="brand" href="#">RELAX <span>VIBE</span></a>
-    <nav aria-label="Main navigation">
-      <a href="#services">Services</a><a href="#locations">Locations</a><a href="#booking">Enquiry</a>
-    </nav>
-  </div>
-</header>
-
-<main>
-  <section class="hero">
-    <div class="wrap">
-      <div class="eyebrow">Professional wellness</div>
-      <h1>Make time to relax.<br>Feel refreshed.</h1>
-      <p>Explore professional massage and wellness services in a calm, respectful and comfortable setting. Send an enquiry to learn about service availability.</p>
-      <a class="btn" href="#booking">Request an appointment</a>
-      <a class="btn secondary" href="#services">Explore services</a>
-    </div>
-  </section>
-
-  <section id="services">
-    <div class="wrap">
-      <div class="section-head">
-        <div class="eyebrow">Our services</div>
-        <h2>Wellness, with care</h2>
-        <p>Service details, duration and prices will be confirmed by the verified service provider before any appointment is accepted.</p>
-      </div>
-      <div class="grid">
-        <article class="card"><div class="symbol">🌿</div><h3>Relaxation Massage</h3><p class="muted">A professional wellness service intended to support relaxation and comfort.</p></article>
-        <article class="card"><div class="symbol">🧖</div><h3>Head & Shoulder Massage</h3><p class="muted">A focused wellness session for the head, neck and shoulder area.</p></article>
-        <article class="card"><div class="symbol">🦶</div><h3>Foot Massage</h3><p class="muted">A professional foot-care and relaxation session.</p></article>
-      </div>
-      <p class="note" style="margin-top:24px">All services are strictly professional and non-sexual. Services are provided only by appropriately qualified, verified professionals. Massage is not a substitute for medical care.</p>
-    </div>
-  </section>
-
-  <section class="locations" id="locations">
-    <div class="wrap">
-      <div class="section-head">
-        <div class="eyebrow">Service areas</div>
-        <h2>Choose your city</h2>
-        <p>Enquiries are currently being collected for these two locations. Availability is subject to confirmation.</p>
-      </div>
-      <div class="grid">
-        <div class="location-card"><h3>Ranchi</h3><p class="muted">Ask about professional wellness service availability in Ranchi.</p></div>
-        <div class="location-card"><h3>Jamshedpur</h3><p class="muted">Ask about professional wellness service availability in Jamshedpur.</p></div>
-        <div class="location-card"><h3>Appointment requests</h3><p class="muted">A request is not a confirmed booking. The provider will confirm availability and details.</p></div>
-      </div>
-    </div>
-  </section>
-
-  <section class="booking" id="booking">
-    <div class="wrap">
-      <div class="section-head">
-        <div class="eyebrow">Get in touch</div>
-        <h2>Send an enquiry</h2>
-        <p>Share only the basic details needed for a reply. Do not enter medical or other sensitive personal information.</p>
-      </div>
-      <form id="enquiryForm">
-        <div class="fields">
-          <div><label for="name">Your name</label><input id="name" name="name" required maxlength="60" placeholder="Enter your name"></div>
-          <div><label for="phone">Contact number</label><input id="phone" name="phone" required inputmode="tel" maxlength="15" placeholder="Your phone number"></div>
-          <div><label for="city">City</label><select id="city" name="city" required><option value="">Select city</option><option>Ranchi</option><option>Jamshedpur</option></select></div>
-          <div><label for="service">Service of interest</label><select id="service" name="service" required><option value="">Choose service</option><option>Relaxation Massage</option><option>Head & Shoulder Massage</option><option>Foot Massage</option><option>Need service details</option></select></div>
-          <div class="full"><label for="time">Preferred day / time (optional)</label><input id="time" name="time" maxlength="80" placeholder="e.g. Saturday afternoon"></div>
-          <div class="full"><label for="message">Message (optional)</label><textarea id="message" name="message" maxlength="400" placeholder="Any basic enquiry"></textarea></div>
-          <div class="full"><button class="btn" type="submit">Continue to WhatsApp</button><p class="small">This opens WhatsApp with your enquiry text. No appointment is confirmed until a verified provider confirms it. To activate this button, add the business WhatsApp number in the website file as explained in README.txt.</p></div>
-        </div>
-      </form>
-    </div>
-  </section>
-</main>
-
-<footer>
-  <div class="wrap"><strong>RELAX VIBE</strong><br><small>Professional Body Massage & Wellness · Ranchi · Jamshedpur</small><p><small>Use this website only for lawful, professional wellness services delivered by verified qualified providers.</small></p></div>
-</footer>
-
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="theme-color" content="#123b35"><title>Relax Vibe | Body Massage & Wellness</title>
+<style>
+:root{--g:#123b35;--gold:#d8b77a;--cream:#f7f4ed;--ink:#20312d;--muted:#66736e}*{box-sizing:border-box}body{margin:0;font:16px/1.6 Arial,sans-serif;background:var(--cream);color:var(--ink)}.wrap{width:min(1080px,92%);margin:auto}header,footer{background:var(--g);color:white;padding:18px 0}.nav{display:flex;justify-content:space-between;align-items:center;gap:18px}.brand{font-weight:800;font-size:1.3rem}.brand span,.eyebrow{color:var(--gold)}nav{display:flex;gap:18px}a{color:inherit;text-decoration:none}.hero{padding:85px 0;color:white;background:linear-gradient(110deg,#09231ff0,#123b35bb),url('https://images.unsplash.com/photo-1540555700478-4be289fbecef?auto=format&fit=crop&w=1600&q=80') center/cover}.eyebrow{text-transform:uppercase;letter-spacing:2px;font-size:.8rem;font-weight:bold}h1{font-size:clamp(2.4rem,6vw,4.4rem);line-height:1.1;margin:14px 0}.hero p{max-width:620px}.btn{display:inline-block;background:var(--gold);color:#1b302b;padding:12px 20px;border:0;border-radius:6px;font-weight:bold;cursor:pointer;margin-top:12px}section{padding:65px 0}.head{text-align:center;max-width:700px;margin:0 auto 30px}h2{color:var(--g);font-size:2.2rem;margin:4px 0}.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}.card,.location{background:white;border-radius:12px;padding:24px;box-shadow:0 6px 22px #183b3010}.card h3{color:var(--g)}.muted{color:var(--muted)}.price{font-weight:bold;color:var(--g)}.note{background:#e9eee8;padding:15px;border-left:4px solid var(--gold);margin-top:22px}.locations{background:#e9eee8}.booking{background:var(--g)}.booking h2{color:white}.booking .head p{color:#d5e2dd}form{background:white;color:var(--ink);padding:25px;border-radius:12px;max-width:720px;margin:auto}.fields{display:grid;grid-template-columns:1fr 1fr;gap:14px}label{display:block;font-weight:bold;font-size:.9rem;margin-bottom:5px}input,select,textarea{width:100%;padding:12px;border:1px solid #ccd8d1;border-radius:6px;font:inherit}textarea{min-height:95px}.full{grid-column:1/-1}.small{font-size:.82rem;color:var(--muted)}footer{text-align:center}footer small{color:#c4d5ce}@media(max-width:700px){.grid{grid-template-columns:1fr}.fields{grid-template-columns:1fr}.full{grid-column:auto}.nav{flex-wrap:wrap}nav{gap:12px;font-size:.9rem}}
+</style></head><body>
+<header><div class="wrap nav"><a class="brand" href="#">RELAX <span>VIBE</span></a><nav><a href="#services">Services</a><a href="#locations">Locations</a><a href="#booking">Enquiry</a></nav></div></header>
+<main><section class="hero"><div class="wrap"><div class="eyebrow">Professional wellness</div><h1>Make time to relax.<br>Feel refreshed.</h1><p>Explore professional body massage and wellness services in a calm, respectful setting. Send an enquiry to learn about availability.</p><a class="btn" href="#booking">Request an appointment</a></div></section>
+<section id="services"><div class="wrap"><div class="head"><div class="eyebrow">Our services</div><h2>Full Body Massage</h2><p class="muted">Choose the style you are interested in. Details, suitability, duration and pricing will be confirmed by a verified professional provider.</p></div>
+<div class="grid">
+<article class="card"><div>🌿</div><h3>Relaxing Full Body Massage</h3><p class="muted">A gentle, relaxation-focused wellness session delivered by a qualified professional.</p><div class="price">Price: To be announced</div></article>
+<article class="card"><div>🪷</div><h3>Swedish-Style Full Body Massage</h3><p class="muted">A traditional massage style offered by a trained professional, subject to suitability.</p><div class="price">Price: To be announced</div></article>
+<article class="card"><div>🌸</div><h3>Aroma Full Body Massage</h3><p class="muted">A relaxation session that may include suitable aromatic products, subject to provider checks and customer sensitivities.</p><div class="price">Price: To be announced</div></article></div>
+<p class="note">All services are strictly professional and non-sexual, and provided only by appropriately qualified, verified professionals. Massage is not a substitute for medical care.</p></div></section>
+<section class="locations" id="locations"><div class="wrap"><div class="head"><div class="eyebrow">Service areas</div><h2>Choose your city</h2><p class="muted">Enquiries are being collected for these locations. Availability is subject to confirmation.</p></div><div class="grid"><div class="location"><h3>Ranchi</h3><p class="muted">Ask about service availability in Ranchi.</p></div><div class="location"><h3>Jamshedpur</h3><p class="muted">Ask about service availability in Jamshedpur.</p></div><div class="location"><h3>Appointment requests</h3><p class="muted">An enquiry is not a confirmed booking. A verified provider must confirm availability.</p></div></div></div></section>
+<section class="booking" id="booking"><div class="wrap"><div class="head"><div class="eyebrow">Get in touch</div><h2>Send an enquiry</h2><p>Share only basic details needed for a reply. Do not enter medical or other sensitive personal information.</p></div>
+<form id="enquiryForm"><div class="fields">
+<div><label for="name">Your name</label><input id="name" name="name" required maxlength="60" placeholder="Enter your name"></div>
+<div><label for="phone">Contact number</label><input id="phone" name="phone" required inputmode="tel" maxlength="15" placeholder="Your phone number"></div>
+<div><label for="city">City</label><select id="city" name="city" required><option value="">Select city</option><option>Ranchi</option><option>Jamshedpur</option></select></div>
+<div><label for="service">Massage variant</label><select id="service" name="service" required><option value="">Choose a variant</option><option>Relaxing Full Body Massage</option><option>Swedish-Style Full Body Massage</option><option>Aroma Full Body Massage</option></select></div>
+<div class="full"><label for="extra">Add your own request (optional)</label><textarea id="extra" name="extra" maxlength="400" placeholder="Write any additional service request or question here"></textarea></div>
+<div class="full"><label for="time">Preferred day / time (optional)</label><input id="time" name="time" maxlength="80" placeholder="e.g. Saturday afternoon"></div>
+<div class="full"><button class="btn" type="submit">Continue to WhatsApp</button><p class="small">This opens WhatsApp with your enquiry text. No appointment is confirmed until a verified provider confirms it.</p></div>
+</div></form></div></section></main>
+<footer><div class="wrap"><strong>RELAX VIBE</strong><br><small>Professional Body Massage & Wellness · Ranchi · Jamshedpur</small><p><small>Professional, non-sexual wellness services by verified qualified providers only.</small></p></div></footer>
 <script>
-  // Replace the placeholder below with the business WhatsApp number:
-  // country code + number, digits only. Example format: 919876543210
-  const BUSINESS_WHATSAPP = "919507197094";
-
-  document.getElementById("enquiryForm").addEventListener("submit", function(event) {
-    event.preventDefault();
-    const data = new FormData(event.currentTarget);
-    const message = [
-      "Hello Relax Vibe, I would like to make a service enquiry.",
-      "Name: " + data.get("name"),
-      "Contact: " + data.get("phone"),
-      "City: " + data.get("city"),
-      "Service: " + data.get("service"),
-      "Preferred day/time: " + (data.get("time") || "Not specified"),
-      "Message: " + (data.get("message") || "None"),
-      "Please share availability and details. I understand this is only an enquiry, not a confirmed booking."
-    ].join("\n");
-
-    if (!/^91[0-9]{10}$/.test(BUSINESS_WHATSAPP)) {
-      alert("Website setup pending: the business WhatsApp number has not been added yet. Please contact the website administrator.");
-      return;
-    }
-    window.open("https://wa.me/" + BUSINESS_WHATSAPP + "?text=" + encodeURIComponent(message), "_blank", "noopener");
-  });
-</script>
-</body>
-</html>
+const BUSINESS_WHATSAPP="919507197094";
+document.getElementById("enquiryForm").addEventListener("submit",function(e){e.preventDefault();const d=new FormData(e.currentTarget);const msg=["Hello Relax Vibe, I would like to make a service enquiry.","Name: "+d.get("name"),"Contact: "+d.get("phone"),"City: "+d.get("city"),"Massage variant: "+d.get("service"),"Additional request: "+(d.get("extra")||"None"),"Preferred day/time: "+(d.get("time")||"Not specified"),"Please share availability and pricing. I understand this is only an enquiry, not a confirmed booking."].join("\n");if(!/^91[0-9]{10}$/.test(BUSINESS_WHATSAPP)){alert("Business WhatsApp number is not configured.");return;}window.open("https://wa.me/"+BUSINESS_WHATSAPP+"?text="+encodeURIComponent(msg),"_blank","noopener");});
+</script></body></html>
