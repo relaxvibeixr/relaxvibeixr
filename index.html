@@ -1,74 +1,149 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1">
-<meta name="description" content="Discover local shops, services and offers in Ranchi and Jamshedpur with Relax Vibe.">
-<title>Relax Vibe | Discover Local</title>
-<style>
-:root{--navy:#12283a;--green:#b9e8d1;--ink:#172532;--muted:#64748b;--paper:#f6f8f7;--white:#fff}
-*{box-sizing:border-box}body{margin:0;font-family:Inter,system-ui,Arial,sans-serif;color:var(--ink);background:var(--paper)}
-header{background:var(--navy);color:white;padding:18px max(5vw,20px);display:flex;align-items:center;justify-content:space-between;gap:18px;position:sticky;top:0;z-index:5}
-.brand{font-size:1.35rem;font-weight:800;letter-spacing:-.04em}.brand span{color:var(--green)}
-nav{display:flex;gap:18px;align-items:center}nav a{color:#e5edf2;text-decoration:none;font-size:.93rem}
-.btn{display:inline-block;border:0;border-radius:12px;padding:12px 17px;background:var(--green);color:#153a30;font-weight:750;text-decoration:none;cursor:pointer}
-.btn.dark{background:var(--navy);color:white}.btn.outline{background:transparent;border:1px solid #cbd5d1;color:var(--ink)}
-.hero{background:linear-gradient(120deg,#12283a,#244c56);color:white;padding:72px max(5vw,20px) 62px}
-.hero-inner{max-width:1100px;margin:auto}.eyebrow{color:var(--green);font-weight:750;text-transform:uppercase;letter-spacing:.12em;font-size:.78rem}
-h1{font-size:clamp(2.5rem,6vw,4.7rem);line-height:1.02;letter-spacing:-.055em;max-width:760px;margin:14px 0}
-.hero p{color:#d5e1e6;max-width:600px;font-size:1.08rem;line-height:1.7}
-.hero-actions{display:flex;gap:12px;flex-wrap:wrap;margin-top:25px}.hero .outline{border-color:#82999e;color:white}
-.wrap{max-width:1100px;margin:auto;padding:42px 20px}.section-head{display:flex;justify-content:space-between;gap:16px;align-items:end;flex-wrap:wrap}
-h2{font-size:1.8rem;letter-spacing:-.035em;margin:0 0 8px}.muted{color:var(--muted);line-height:1.6}
-.controls{display:grid;grid-template-columns:1fr 1.5fr;gap:12px;margin:25px 0 18px}
-input,select,textarea{width:100%;border:1px solid #d7e0dc;background:white;border-radius:11px;padding:13px;font:inherit;color:var(--ink)}
-input:focus,select:focus,textarea:focus{outline:2px solid #8bcbb0;border-color:transparent}
-.categories{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:22px}
-.chip{border:1px solid #d4dfda;border-radius:99px;padding:8px 13px;background:white;cursor:pointer;color:#334155}
-.chip.active{background:var(--navy);color:white;border-color:var(--navy)}
-.empty{background:white;border:1px dashed #cbd5d1;border-radius:18px;padding:34px;text-align:center;color:var(--muted)}
-.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}.card{background:white;border:1px solid #e6ece9;border-radius:16px;padding:20px}
-.card .symbol{font-size:1.6rem}.card h3{margin:12px 0 6px}.card p{color:var(--muted);line-height:1.5;font-size:.93rem}
-.tag{display:inline-block;background:#edf7f1;color:#28634c;border-radius:99px;padding:5px 9px;font-size:.76rem;font-weight:700}
-.promo{background:#e6f4ed;border-radius:22px;padding:28px;display:flex;justify-content:space-between;gap:20px;align-items:center;flex-wrap:wrap}
-.form-section{background:white;border:1px solid #e4ebe7;border-radius:20px;padding:26px;max-width:760px;margin:26px auto}
-.form-grid{display:grid;grid-template-columns:1fr 1fr;gap:14px}.field label{display:block;font-size:.88rem;font-weight:700;margin:0 0 7px}.field.full{grid-column:1/-1}
-.notice{font-size:.83rem;color:var(--muted);line-height:1.55}.success{display:none;background:#e8f7ee;border:1px solid #b9e8d1;color:#1e513b;padding:14px;border-radius:12px;margin-top:14px}
-footer{background:var(--navy);color:#d5e1e6;padding:28px max(5vw,20px);margin-top:35px}
-footer .foot{max-width:1100px;margin:auto;display:flex;justify-content:space-between;gap:15px;flex-wrap:wrap}
-@media(max-width:720px){nav a:not(.btn){display:none}.controls,.grid,.form-grid{grid-template-columns:1fr}.hero{padding-top:55px}.wrap{padding-top:32px}.field.full{grid-column:auto}}
-</style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#123b35">
+  <meta name="description" content="Relax Vibe — professional massage and wellness service enquiries in Ranchi and Jamshedpur.">
+  <title>Relax Vibe | Body Massage & Wellness</title>
+  <style>
+    :root{--green:#123b35;--green2:#1d5b50;--gold:#d8b77a;--cream:#f7f4ed;--ink:#20312d;--muted:#66736e;--white:#fff}
+    *{box-sizing:border-box} html{scroll-behavior:smooth}
+    body{margin:0;font-family:Arial,Helvetica,sans-serif;background:var(--cream);color:var(--ink);line-height:1.6}
+    a{color:inherit;text-decoration:none}.wrap{width:min(1120px,92%);margin:auto}
+    header{background:var(--green);color:white;position:sticky;top:0;z-index:10}
+    .nav{height:72px;display:flex;align-items:center;justify-content:space-between;gap:20px}
+    .brand{font-size:1.35rem;font-weight:800;letter-spacing:.4px}.brand span{color:var(--gold)}
+    nav{display:flex;gap:22px;font-size:.94rem}nav a:hover{color:var(--gold)}
+    .hero{background:linear-gradient(110deg,rgba(9,35,31,.94),rgba(18,59,53,.76)),url('https://images.unsplash.com/photo-1540555700478-4be289fbecef?auto=format&fit=crop&w=1800&q=85') center/cover;color:white;padding:100px 0 105px}
+    .eyebrow{color:var(--gold);font-weight:700;letter-spacing:2px;text-transform:uppercase;font-size:.78rem}
+    h1{font-size:clamp(2.3rem,6vw,4.6rem);line-height:1.08;max-width:760px;margin:15px 0}
+    .hero p{max-width:620px;color:#e5eeeb;font-size:1.08rem}
+    .btn{display:inline-block;background:var(--gold);color:#1b302b;padding:13px 21px;border-radius:6px;font-weight:700;border:0;cursor:pointer;margin-top:14px}
+    .btn:hover{filter:brightness(.95)}.btn.secondary{background:transparent;border:1px solid #d8e3df;color:white;margin-left:8px}
+    section{padding:70px 0}.section-head{text-align:center;max-width:700px;margin:0 auto 34px}
+    h2{font-size:clamp(1.8rem,4vw,2.6rem);margin:0 0 10px;color:var(--green)}
+    .section-head p,.muted{color:var(--muted)}
+    .grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+    .card{background:white;border-radius:12px;padding:25px;box-shadow:0 8px 26px rgba(22,49,42,.06)}
+    .card .symbol{font-size:1.8rem}.card h3{color:var(--green);margin:12px 0 6px}
+    .note{background:#e9eee8;border-left:4px solid var(--gold);padding:15px 18px;border-radius:5px;color:#43534d}
+    .locations{background:#e9eee8}.location-card{background:white;padding:25px;border-radius:12px}
+    .booking{background:var(--green);color:white}.booking h2{color:white}.booking .section-head p{color:#d5e2dd}
+    form{background:white;color:var(--ink);padding:26px;border-radius:12px;max-width:720px;margin:auto}
+    .fields{display:grid;grid-template-columns:1fr 1fr;gap:15px}
+    label{display:block;font-weight:700;font-size:.9rem;margin:0 0 6px}
+    input,select,textarea{width:100%;padding:12px;border:1px solid #d4ddd8;border-radius:6px;font:inherit;background:#fff}
+    textarea{min-height:100px;resize:vertical}.full{grid-column:1/-1}
+    .small{font-size:.82rem;color:var(--muted);margin-top:12px}
+    footer{background:#0b2b26;color:#dbe6e1;padding:30px 0;text-align:center}
+    footer small{color:#b9cbc3}
+    @media(max-width:760px){nav{gap:12px;font-size:.82rem}.nav{height:auto;min-height:68px;flex-wrap:wrap;padding:12px 0}.grid{grid-template-columns:1fr}.hero{padding:75px 0}.fields{grid-template-columns:1fr}.full{grid-column:auto}.btn.secondary{margin-left:0}}
+  </style>
 </head>
 <body>
-<header><div class="brand">Relax <span>Vibe</span></div><nav><a href="#explore">Explore</a><a href="#offers">Offers</a><a href="#list">For businesses</a><a class="btn" href="#list">List your business</a></nav></header>
-<section class="hero"><div class="hero-inner"><div class="eyebrow">Ranchi · Jamshedpur</div><h1>Discover your city's local favourites.</h1><p>Find neighbourhood shops, services and special offers. Support local businesses and discover something new around your city.</p><div class="hero-actions"><a class="btn" href="#explore">Explore businesses</a><a class="btn outline" href="#list">Promote your business</a></div></div></section>
+<header>
+  <div class="wrap nav">
+    <a class="brand" href="#">RELAX <span>VIBE</span></a>
+    <nav aria-label="Main navigation">
+      <a href="#services">Services</a><a href="#locations">Locations</a><a href="#booking">Enquiry</a>
+    </nav>
+  </div>
+</header>
+
 <main>
-<section class="wrap" id="explore"><div class="section-head"><div><h2>Explore local businesses</h2><div class="muted">Find shops and services in your city.</div></div></div>
-<div class="controls"><select id="city"><option>Ranchi</option><option>Jamshedpur</option></select><input id="search" placeholder="Search by business name or area..." aria-label="Search businesses"></div>
-<div class="categories" id="categories"></div><div id="businesses" class="empty">No businesses have been published yet. Be one of the first to join Relax Vibe.</div>
-</section>
-<section class="wrap" id="offers"><div class="promo"><div><div class="eyebrow" style="color:#28634c">Local offers</div><h2>Great finds start nearby.</h2><div class="muted">Offers will appear here when local businesses publish them.</div></div><a class="btn dark" href="#list">Add your business</a></div></section>
-<section class="wrap" id="list"><div style="text-align:center"><div class="eyebrow" style="color:#28634c">Grow with your city</div><h2>List your business on Relax Vibe</h2><p class="muted">Share your shop details so local customers can discover you.</p></div>
-<div class="form-section"><form id="businessForm"><div class="form-grid">
-<div class="field"><label for="business">Business / shop name *</label><input id="business" name="business" required maxlength="80" placeholder="Your business name"></div>
-<div class="field"><label for="owner">Owner / contact person *</label><input id="owner" name="owner" required maxlength="80" placeholder="Your name"></div>
-<div class="field"><label for="category">Category *</label><select id="category" name="category" required><option value="">Choose category</option><option>Fashion & Clothing</option><option>Food & Cafe</option><option>Electronics</option><option>Beauty & Salon</option><option>Grocery</option><option>Mobile & Accessories</option><option>Education</option><option>Healthcare</option><option>Home Services</option><option>Other</option></select></div>
-<div class="field"><label for="formCity">City *</label><select id="formCity" name="city"><option>Ranchi</option><option>Jamshedpur</option></select></div>
-<div class="field full"><label for="address">Full business address *</label><textarea id="address" name="address" required rows="2" maxlength="250" placeholder="Shop, road, area and nearby landmark"></textarea></div>
-<div class="field"><label for="phone">Phone number *</label><input id="phone" name="phone" required inputmode="tel" pattern="[6-9][0-9]{9}" maxlength="10" placeholder="10-digit mobile number"></div>
-<div class="field"><label for="whatsapp">WhatsApp number</label><input id="whatsapp" name="whatsapp" inputmode="tel" pattern="[6-9][0-9]{9}" maxlength="10" placeholder="If different from phone"></div>
-<div class="field full"><label for="description">Business description</label><textarea id="description" name="description" rows="3" maxlength="500" placeholder="What do you offer?"></textarea></div>
-<div class="field full"><label for="offer">Current offer (optional)</label><input id="offer" name="offer" maxlength="150" placeholder="Example: 10% off this weekend"></div>
-</div><p class="notice">By submitting, you confirm these details are accurate and that you are authorised to share them. This starter version stores submissions only in this browser for demonstration; it does not send them to an admin or publish them online.</p><button class="btn dark" type="submit">Submit business details</button><div class="success" id="success" role="status">Submission saved in this browser demo. A live database and admin review workflow still need to be connected.</div></form></div>
-</section>
+  <section class="hero">
+    <div class="wrap">
+      <div class="eyebrow">Professional wellness</div>
+      <h1>Make time to relax.<br>Feel refreshed.</h1>
+      <p>Explore professional massage and wellness services in a calm, respectful and comfortable setting. Send an enquiry to learn about service availability.</p>
+      <a class="btn" href="#booking">Request an appointment</a>
+      <a class="btn secondary" href="#services">Explore services</a>
+    </div>
+  </section>
+
+  <section id="services">
+    <div class="wrap">
+      <div class="section-head">
+        <div class="eyebrow">Our services</div>
+        <h2>Wellness, with care</h2>
+        <p>Service details, duration and prices will be confirmed by the verified service provider before any appointment is accepted.</p>
+      </div>
+      <div class="grid">
+        <article class="card"><div class="symbol">🌿</div><h3>Relaxation Massage</h3><p class="muted">A professional wellness service intended to support relaxation and comfort.</p></article>
+        <article class="card"><div class="symbol">🧖</div><h3>Head & Shoulder Massage</h3><p class="muted">A focused wellness session for the head, neck and shoulder area.</p></article>
+        <article class="card"><div class="symbol">🦶</div><h3>Foot Massage</h3><p class="muted">A professional foot-care and relaxation session.</p></article>
+      </div>
+      <p class="note" style="margin-top:24px">All services are strictly professional and non-sexual. Services are provided only by appropriately qualified, verified professionals. Massage is not a substitute for medical care.</p>
+    </div>
+  </section>
+
+  <section class="locations" id="locations">
+    <div class="wrap">
+      <div class="section-head">
+        <div class="eyebrow">Service areas</div>
+        <h2>Choose your city</h2>
+        <p>Enquiries are currently being collected for these two locations. Availability is subject to confirmation.</p>
+      </div>
+      <div class="grid">
+        <div class="location-card"><h3>Ranchi</h3><p class="muted">Ask about professional wellness service availability in Ranchi.</p></div>
+        <div class="location-card"><h3>Jamshedpur</h3><p class="muted">Ask about professional wellness service availability in Jamshedpur.</p></div>
+        <div class="location-card"><h3>Appointment requests</h3><p class="muted">A request is not a confirmed booking. The provider will confirm availability and details.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="booking" id="booking">
+    <div class="wrap">
+      <div class="section-head">
+        <div class="eyebrow">Get in touch</div>
+        <h2>Send an enquiry</h2>
+        <p>Share only the basic details needed for a reply. Do not enter medical or other sensitive personal information.</p>
+      </div>
+      <form id="enquiryForm">
+        <div class="fields">
+          <div><label for="name">Your name</label><input id="name" name="name" required maxlength="60" placeholder="Enter your name"></div>
+          <div><label for="phone">Contact number</label><input id="phone" name="phone" required inputmode="tel" maxlength="15" placeholder="Your phone number"></div>
+          <div><label for="city">City</label><select id="city" name="city" required><option value="">Select city</option><option>Ranchi</option><option>Jamshedpur</option></select></div>
+          <div><label for="service">Service of interest</label><select id="service" name="service" required><option value="">Choose service</option><option>Relaxation Massage</option><option>Head & Shoulder Massage</option><option>Foot Massage</option><option>Need service details</option></select></div>
+          <div class="full"><label for="time">Preferred day / time (optional)</label><input id="time" name="time" maxlength="80" placeholder="e.g. Saturday afternoon"></div>
+          <div class="full"><label for="message">Message (optional)</label><textarea id="message" name="message" maxlength="400" placeholder="Any basic enquiry"></textarea></div>
+          <div class="full"><button class="btn" type="submit">Continue to WhatsApp</button><p class="small">This opens WhatsApp with your enquiry text. No appointment is confirmed until a verified provider confirms it. To activate this button, add the business WhatsApp number in the website file as explained in README.txt.</p></div>
+        </div>
+      </form>
+    </div>
+  </section>
 </main>
-<footer><div class="foot"><div><strong>Relax Vibe</strong><div style="font-size:.88rem;margin-top:5px">Discover local. Support local.</div></div><div style="font-size:.85rem">Ranchi & Jamshedpur, Jharkhand · © <span id="year"></span> Relax Vibe</div></div></footer>
+
+<footer>
+  <div class="wrap"><strong>RELAX VIBE</strong><br><small>Professional Body Massage & Wellness · Ranchi · Jamshedpur</small><p><small>Use this website only for lawful, professional wellness services delivered by verified qualified providers.</small></p></div>
+</footer>
+
 <script>
-const cats=['All','Fashion & Clothing','Food & Cafe','Electronics','Beauty & Salon','Grocery','Services'];
-let selected='All';
-const catBox=document.getElementById('categories');
-cats.forEach(c=>{const b=document.createElement('button');b.className='chip'+(c==='All'?' active':'');b.textContent=c;b.onclick=()=>{selected=c;document.querySelectorAll('.chip').forEach(x=>x.classList.toggle('active',x.textContent===c));render()};catBox.appendChild(b)});
-function render(){const city=document.getElementById('city').value;const q=document.getElementById('search').value.toLowerCase();const list=JSON.parse(localStorage.getItem('rv_public_demo')||'[]').filter(x=>x.city===city&&(selected==='All'||x.category===selected)&&(`${x.business} ${x.address} ${x.description}`).toLowerCase().includes(q));const root=document.getElementById('businesses');root.className=list.length?'grid':'empty';root.innerHTML='';if(!list.length){root.textContent='No published businesses yet. Business submissions are not automatically approved or published in this demo.';return}list.forEach(x=>{const card=document.createElement('article');card.className='card';card.innerHTML=`<span class="tag"></span><h3></h3><p></p><p></p>`;card.querySelector('.tag').textContent=x.category;card.querySelector('h3').textContent=x.business;card.querySelectorAll('p')[0].textContent=x.address;card.querySelectorAll('p')[1].textContent=x.description||'Local business';root.appendChild(card)})}
-document.getElementById('city').addEventListener('change',render);document.getElementById('search').addEventListener('input',render);
-document.getElementById('businessForm').addEventListener('submit',e=>{e.preventDefault();const f=new FormData(e.target);const item=Object.fromEntries(f.entries());const items=JSON.parse(localStorage.getItem('rv_submissions_demo')||'[]');items.push({...item,id:Date.now(),status:'pending'});localStorage.setItem('rv_submissions_demo',JSON.stringify(items));document.getElementById('success').style.display='block';e.target.reset()});
-document.getElementById('year').textContent=new Date().getFullYear();render();
-</script></body></html>
+  // Replace the placeholder below with the business WhatsApp number:
+  // country code + number, digits only. Example format: 919876543210
+  const BUSINESS_WHATSAPP = "91XXXXXXXXXX";
+
+  document.getElementById("enquiryForm").addEventListener("submit", function(event) {
+    event.preventDefault();
+    const data = new FormData(event.currentTarget);
+    const message = [
+      "Hello Relax Vibe, I would like to make a service enquiry.",
+      "Name: " + data.get("name"),
+      "Contact: " + data.get("phone"),
+      "City: " + data.get("city"),
+      "Service: " + data.get("service"),
+      "Preferred day/time: " + (data.get("time") || "Not specified"),
+      "Message: " + (data.get("message") || "None"),
+      "Please share availability and details. I understand this is only an enquiry, not a confirmed booking."
+    ].join("\n");
+
+    if (!/^91[0-9]{10}$/.test(BUSINESS_WHATSAPP)) {
+      alert("Website setup pending: the business WhatsApp number has not been added yet. Please contact the website administrator.");
+      return;
+    }
+    window.open("https://wa.me/" + BUSINESS_WHATSAPP + "?text=" + encodeURIComponent(message), "_blank", "noopener");
+  });
+</script>
+</body>
+</html>
