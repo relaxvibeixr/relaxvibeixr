@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="Discover local shops, services and offers in Ranchi and Jamshedpur with Relax Vibe.">
+<title>Relax Vibe | Discover Local</title>
+<style>
+:root{--navy:#12283a;--green:#b9e8d1;--ink:#172532;--muted:#64748b;--paper:#f6f8f7;--white:#fff}
+*{box-sizing:border-box}body{margin:0;font-family:Inter,system-ui,Arial,sans-serif;color:var(--ink);background:var(--paper)}
+header{background:var(--navy);color:white;padding:18px max(5vw,20px);display:flex;align-items:center;justify-content:space-between;gap:18px;position:sticky;top:0;z-index:5}
+.brand{font-size:1.35rem;font-weight:800;letter-spacing:-.04em}.brand span{color:var(--green)}
+nav{display:flex;gap:18px;align-items:center}nav a{color:#e5edf2;text-decoration:none;font-size:.93rem}
+.btn{display:inline-block;border:0;border-radius:12px;padding:12px 17px;background:var(--green);color:#153a30;font-weight:750;text-decoration:none;cursor:pointer}
+.btn.dark{background:var(--navy);color:white}.btn.outline{background:transparent;border:1px solid #cbd5d1;color:var(--ink)}
+.hero{background:linear-gradient(120deg,#12283a,#244c56);color:white;padding:72px max(5vw,20px) 62px}
+.hero-inner{max-width:1100px;margin:auto}.eyebrow{color:var(--green);font-weight:750;text-transform:uppercase;letter-spacing:.12em;font-size:.78rem}
+h1{font-size:clamp(2.5rem,6vw,4.7rem);line-height:1.02;letter-spacing:-.055em;max-width:760px;margin:14px 0}
+.hero p{color:#d5e1e6;max-width:600px;font-size:1.08rem;line-height:1.7}
+.hero-actions{display:flex;gap:12px;flex-wrap:wrap;margin-top:25px}.hero .outline{border-color:#82999e;color:white}
+.wrap{max-width:1100px;margin:auto;padding:42px 20px}.section-head{display:flex;justify-content:space-between;gap:16px;align-items:end;flex-wrap:wrap}
+h2{font-size:1.8rem;letter-spacing:-.035em;margin:0 0 8px}.muted{color:var(--muted);line-height:1.6}
+.controls{display:grid;grid-template-columns:1fr 1.5fr;gap:12px;margin:25px 0 18px}
+input,select,textarea{width:100%;border:1px solid #d7e0dc;background:white;border-radius:11px;padding:13px;font:inherit;color:var(--ink)}
+input:focus,select:focus,textarea:focus{outline:2px solid #8bcbb0;border-color:transparent}
+.categories{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:22px}
+.chip{border:1px solid #d4dfda;border-radius:99px;padding:8px 13px;background:white;cursor:pointer;color:#334155}
+.chip.active{background:var(--navy);color:white;border-color:var(--navy)}
+.empty{background:white;border:1px dashed #cbd5d1;border-radius:18px;padding:34px;text-align:center;color:var(--muted)}
+.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}.card{background:white;border:1px solid #e6ece9;border-radius:16px;padding:20px}
+.card .symbol{font-size:1.6rem}.card h3{margin:12px 0 6px}.card p{color:var(--muted);line-height:1.5;font-size:.93rem}
+.tag{display:inline-block;background:#edf7f1;color:#28634c;border-radius:99px;padding:5px 9px;font-size:.76rem;font-weight:700}
+.promo{background:#e6f4ed;border-radius:22px;padding:28px;display:flex;justify-content:space-between;gap:20px;align-items:center;flex-wrap:wrap}
+.form-section{background:white;border:1px solid #e4ebe7;border-radius:20px;padding:26px;max-width:760px;margin:26px auto}
+.form-grid{display:grid;grid-template-columns:1fr 1fr;gap:14px}.field label{display:block;font-size:.88rem;font-weight:700;margin:0 0 7px}.field.full{grid-column:1/-1}
+.notice{font-size:.83rem;color:var(--muted);line-height:1.55}.success{display:none;background:#e8f7ee;border:1px solid #b9e8d1;color:#1e513b;padding:14px;border-radius:12px;margin-top:14px}
+footer{background:var(--navy);color:#d5e1e6;padding:28px max(5vw,20px);margin-top:35px}
+footer .foot{max-width:1100px;margin:auto;display:flex;justify-content:space-between;gap:15px;flex-wrap:wrap}
+@media(max-width:720px){nav a:not(.btn){display:none}.controls,.grid,.form-grid{grid-template-columns:1fr}.hero{padding-top:55px}.wrap{padding-top:32px}.field.full{grid-column:auto}}
+</style>
+</head>
+<body>
+<header><div class="brand">Relax <span>Vibe</span></div><nav><a href="#explore">Explore</a><a href="#offers">Offers</a><a href="#list">For businesses</a><a class="btn" href="#list">List your business</a></nav></header>
+<section class="hero"><div class="hero-inner"><div class="eyebrow">Ranchi · Jamshedpur</div><h1>Discover your city's local favourites.</h1><p>Find neighbourhood shops, services and special offers. Support local businesses and discover something new around your city.</p><div class="hero-actions"><a class="btn" href="#explore">Explore businesses</a><a class="btn outline" href="#list">Promote your business</a></div></div></section>
+<main>
+<section class="wrap" id="explore"><div class="section-head"><div><h2>Explore local businesses</h2><div class="muted">Find shops and services in your city.</div></div></div>
+<div class="controls"><select id="city"><option>Ranchi</option><option>Jamshedpur</option></select><input id="search" placeholder="Search by business name or area..." aria-label="Search businesses"></div>
+<div class="categories" id="categories"></div><div id="businesses" class="empty">No businesses have been published yet. Be one of the first to join Relax Vibe.</div>
+</section>
+<section class="wrap" id="offers"><div class="promo"><div><div class="eyebrow" style="color:#28634c">Local offers</div><h2>Great finds start nearby.</h2><div class="muted">Offers will appear here when local businesses publish them.</div></div><a class="btn dark" href="#list">Add your business</a></div></section>
+<section class="wrap" id="list"><div style="text-align:center"><div class="eyebrow" style="color:#28634c">Grow with your city</div><h2>List your business on Relax Vibe</h2><p class="muted">Share your shop details so local customers can discover you.</p></div>
+<div class="form-section"><form id="businessForm"><div class="form-grid">
+<div class="field"><label for="business">Business / shop name *</label><input id="business" name="business" required maxlength="80" placeholder="Your business name"></div>
+<div class="field"><label for="owner">Owner / contact person *</label><input id="owner" name="owner" required maxlength="80" placeholder="Your name"></div>
+<div class="field"><label for="category">Category *</label><select id="category" name="category" required><option value="">Choose category</option><option>Fashion & Clothing</option><option>Food & Cafe</option><option>Electronics</option><option>Beauty & Salon</option><option>Grocery</option><option>Mobile & Accessories</option><option>Education</option><option>Healthcare</option><option>Home Services</option><option>Other</option></select></div>
+<div class="field"><label for="formCity">City *</label><select id="formCity" name="city"><option>Ranchi</option><option>Jamshedpur</option></select></div>
+<div class="field full"><label for="address">Full business address *</label><textarea id="address" name="address" required rows="2" maxlength="250" placeholder="Shop, road, area and nearby landmark"></textarea></div>
+<div class="field"><label for="phone">Phone number *</label><input id="phone" name="phone" required inputmode="tel" pattern="[6-9][0-9]{9}" maxlength="10" placeholder="10-digit mobile number"></div>
+<div class="field"><label for="whatsapp">WhatsApp number</label><input id="whatsapp" name="whatsapp" inputmode="tel" pattern="[6-9][0-9]{9}" maxlength="10" placeholder="If different from phone"></div>
+<div class="field full"><label for="description">Business description</label><textarea id="description" name="description" rows="3" maxlength="500" placeholder="What do you offer?"></textarea></div>
+<div class="field full"><label for="offer">Current offer (optional)</label><input id="offer" name="offer" maxlength="150" placeholder="Example: 10% off this weekend"></div>
+</div><p class="notice">By submitting, you confirm these details are accurate and that you are authorised to share them. This starter version stores submissions only in this browser for demonstration; it does not send them to an admin or publish them online.</p><button class="btn dark" type="submit">Submit business details</button><div class="success" id="success" role="status">Submission saved in this browser demo. A live database and admin review workflow still need to be connected.</div></form></div>
+</section>
+</main>
+<footer><div class="foot"><div><strong>Relax Vibe</strong><div style="font-size:.88rem;margin-top:5px">Discover local. Support local.</div></div><div style="font-size:.85rem">Ranchi & Jamshedpur, Jharkhand · © <span id="year"></span> Relax Vibe</div></div></footer>
+<script>
+const cats=['All','Fashion & Clothing','Food & Cafe','Electronics','Beauty & Salon','Grocery','Services'];
+let selected='All';
+const catBox=document.getElementById('categories');
+cats.forEach(c=>{const b=document.createElement('button');b.className='chip'+(c==='All'?' active':'');b.textContent=c;b.onclick=()=>{selected=c;document.querySelectorAll('.chip').forEach(x=>x.classList.toggle('active',x.textContent===c));render()};catBox.appendChild(b)});
+function render(){const city=document.getElementById('city').value;const q=document.getElementById('search').value.toLowerCase();const list=JSON.parse(localStorage.getItem('rv_public_demo')||'[]').filter(x=>x.city===city&&(selected==='All'||x.category===selected)&&(`${x.business} ${x.address} ${x.description}`).toLowerCase().includes(q));const root=document.getElementById('businesses');root.className=list.length?'grid':'empty';root.innerHTML='';if(!list.length){root.textContent='No published businesses yet. Business submissions are not automatically approved or published in this demo.';return}list.forEach(x=>{const card=document.createElement('article');card.className='card';card.innerHTML=`<span class="tag"></span><h3></h3><p></p><p></p>`;card.querySelector('.tag').textContent=x.category;card.querySelector('h3').textContent=x.business;card.querySelectorAll('p')[0].textContent=x.address;card.querySelectorAll('p')[1].textContent=x.description||'Local business';root.appendChild(card)})}
+document.getElementById('city').addEventListener('change',render);document.getElementById('search').addEventListener('input',render);
+document.getElementById('businessForm').addEventListener('submit',e=>{e.preventDefault();const f=new FormData(e.target);const item=Object.fromEntries(f.entries());const items=JSON.parse(localStorage.getItem('rv_submissions_demo')||'[]');items.push({...item,id:Date.now(),status:'pending'});localStorage.setItem('rv_submissions_demo',JSON.stringify(items));document.getElementById('success').style.display='block';e.target.reset()});
+document.getElementById('year').textContent=new Date().getFullYear();render();
+</script></body></html>
